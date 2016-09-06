@@ -12,24 +12,50 @@
     <tbody>
         <tr>
             <td>テキスト入力欄</td>
-            <td><input type="text" name="txt1" /></td>
+            <td><input type="text" id="txtid1" name="txt1" /></td>
         </tr> 
         <tr>
             <td>パスワード入力欄</td>
-            <td><input type="password" name="pass1" /></td>
+            <td><input type="password" id="passid1" name="pass1" /></td>
         </tr>
         <tr>
             <td>ラジオボタン</td>
             <td>
-                <input type="radio" name="radio1" value="radioval1" />ラジオ１
-                <input type="radio" name="radio1" value="radioval2" />ラジオ２
+                <input type="radio" id="radioid1" name="radio1" value="radioval1" />ラジオ１
+                <input type="radio" id="radioid2" name="radio1" value="radioval2" />ラジオ２
             </td>
         </tr>
         <tr>
             <td>チェックボックス</td>
             <td>
-                <input type="checkbox" name="chk1" value="chkval1" />チェック１
-                <input type="checkbox" name="chk1" value="chkval2" />チェック２
+                <input type="checkbox" id="chkid1" name="chk1" value="chkval1" />チェック１
+                <input type="checkbox" id="chkid2" name="chk1" value="chkval2" />チェック２
+            </td>
+        </tr>
+        <tr>
+            <td>ドロップダウンリスト</td>
+            <td>
+                <select id="dropdownid1" name="selected">
+                    <option value="opt1">ドロップ１</option>
+                    <option value="opt2">ドロップ２</option>
+                    <option value="opt3">ドロップ３</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>リスト</td>
+            <td>
+                <select id="listid1" multiple="multiple" name="selected_multiple">
+                    <option value="list1">リスト１</option>
+                    <option value="list2">リスト２</option>
+                    <option value="list3">リスト３</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>テキストエリア</td>
+            <td>
+                <textarea id="textareaid1"></textarea>
             </td>
         </tr>
         <tr>
@@ -41,7 +67,7 @@
         <tr>
             <td>ボタン</td>
             <td>
-                <input type="button" name="btn1" value="リセットボタン" onclick="window.alert('ボタンクリック')" />
+                <input type="button" name="btn1" value="ボタン" onclick="window.alert('ボタンクリック')" />
             </td>
         </tr>
     </tbody>
