@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\docs\index.html = ..\docs\index.html
 		..\docs\index2.html = ..\docs\index2.html
+		..\docs\todosample1.html = ..\docs\todosample1.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{4B1AEB4F-82FC-493B-98D3-6C5012B699D1}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\js\todolist.js = ..\docs\js\todolist.js
 	EndProjectSection
 EndProject
 Global
