@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML>
+<html ng-app="TodoListModule">
+<head>
+<meta charset="UTF-8">
+<title>todoリスト</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="js\todolist.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>Todoリスト</h1>
+
+<table ng-controller="ShowTaskController">
+<tr ng-repeat='task in tasks' ng-class="{ done : task.done}">
+<td>{{task.title}}</td><td><button ng-click="doneTask($index)">済んだ</button></td>
+</tr>
+</table>
+
+<form ng-submit="addTask()" ng-controller="AddTaskController">
+<input type="text" ng-model="title" required>
+<input type="submit" value="追加する">
+</form>
+
+<div ng-controller="ShowDoneTaskController" class="done_tasks" ng-show="show_done_tasks">
+<h2>済んだタスク</h2>
+<ul>
+<li ng-repeat='task in done_tasks'>{{task}}</li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -95,6 +95,7 @@ namespace SeleniumSampleProject
                 {
                     element.SendKeys(OpenQA.Selenium.Keys.Control);
                     element.Click();
+                    
                 }
             }
             else
