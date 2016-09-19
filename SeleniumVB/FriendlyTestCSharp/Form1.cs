@@ -30,6 +30,8 @@ namespace FriendlyTestCSharp
 
             sampleForm.txtTest.Text = "123";
 
+            sampleForm.ComboBox1.Text = "ドロップ３";
+
             System.Threading.Thread.Sleep(2000);
 
             _app.Dispose();

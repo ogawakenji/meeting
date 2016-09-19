@@ -60,8 +60,8 @@ namespace SeleniumSampleProject
 
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
-            SeleniumUtil.browserScale(driver);
-            SeleniumUtil.browserScale(driver);
+            //SeleniumUtil.browserScale(driver);
+            //SeleniumUtil.browserScale(driver);
 
 
             SeleniumUtil.elementSendKeysById(driver, "txtid1", "abcdefg");
@@ -72,12 +72,34 @@ namespace SeleniumSampleProject
 
             SeleniumUtil.elementSelectTextById(driver, "dropdownid1", "ドロップ２");
 
-            SeleniumUtil.browserScaleDown(driver);
-            SeleniumUtil.browserScaleDown(driver);
-            SeleniumUtil.browserScaleDown(driver);
-            SeleniumUtil.browserScaleDown(driver);
+            System.Threading.Thread.Sleep(1000);
 
-            SeleniumUtil.browserScaleClear(driver);
+            IWebElement chkelement = driver.FindElement(By.Id("radioid1"));
+            chkelement.SendKeys(OpenQA.Selenium.Keys.Space);
+
+            System.Threading.Thread.Sleep(1000);
+
+            //driver.FindElement(By.Id("radioid1")).Click();
+            driver.FindElement(By.Id("chkid1")).SendKeys(OpenQA.Selenium.Keys.Space);
+
+            System.Threading.Thread.Sleep(1000);
+
+            driver.FindElement(By.Id("chkid2")).SendKeys(OpenQA.Selenium.Keys.Space);
+
+            System.Threading.Thread.Sleep(1000);
+
+            IWebElement element = driver.FindElement(By.Id("listid1"));
+            SelectElement listMultiple = new SelectElement(element);
+            listMultiple.SelectByText("リスト１");
+            listMultiple.SelectByText("リスト３");
+
+
+            //SeleniumUtil.browserScaleDown(driver);
+            //SeleniumUtil.browserScaleDown(driver);
+            //SeleniumUtil.browserScaleDown(driver);
+            //SeleniumUtil.browserScaleDown(driver);
+
+            //SeleniumUtil.browserScaleClear(driver);
 
 
             System.Threading.Thread.Sleep(5000);
